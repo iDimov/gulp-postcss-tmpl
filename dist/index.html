@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,134 @@
   <title>Postcss</title>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body>
-  <header>
-  header
-</header>
-  <h1>
-    title
-  </h1>
-  
-  <footer>
-  footer
-</footer>
 
+<body>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="/js/vendor/jquery.js"></script>
+
+  <div class="accordion">
+    <div class="accordion-row">
+      <div class="accordion-header">
+        Header
+        <i class="material-icons expand">expand_more</i>
+      </div>
+      <div class="accordion-content">
+        <div class="wr">
+          <p>
+            content
+          </p>
+          <br />
+          <p>
+            content
+          </p>
+          <input type="checkbox">
+        </div>
+      </div>
+    </div>
+    <div class="accordion-row open">
+      <div class="accordion-header">
+        Header
+        <i class="material-icons expand">expand_more</i>
+      </div>
+      <div class="accordion-content">
+        <div class="wr">
+          <p>
+            content
+          </p>
+          <br />
+          <p>
+            content
+          </p>
+          <form class="checkbox">
+              <ul class="checkbox__list">
+                <li class="checkbox__item">
+                  <i class="material-icons chevron">chevron_right</i>
+                  <label class="checkbox__label" for="check-all">
+                    <input class="checkbox__input" type="checkbox" id="check-all">
+                    <i class="checkbox__icon material-icons">check_box_outline_blank</i>
+                    <span class="checkbox__text">
+                      Все
+                    </span>
+                  </label>
+                  <div class="submenu">
+                      <ul class="checkbox__list">
+                          <li class="checkbox__item">
+                            <label class="checkbox__label" for="check-all-2">
+                              <input class="checkbox__input" type="checkbox" id="check-all-2">
+                              <i class="checkbox__icon material-icons">check_box_outline_blank</i>
+                              <span class="checkbox__text">
+                                Все
+                              </span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <label class="checkbox__label" for="check-item-11">
+                              <input class="checkbox__input" checked="" type="checkbox" id="check-item-11">
+                              <i class="checkbox__icon material-icons">check_box</i>
+                              <span class="checkbox__text">
+                                Маркированный, нумерованный списки.
+                              </span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <label class="checkbox__label" for="check-item-12">
+                              <input class="checkbox__input" type="checkbox" id="check-item-12">
+                              <i class="checkbox__icon material-icons">check_box_outline_blank</i>
+                              <span class="checkbox__text">
+                                Гиперссылки
+                              </span>
+                            </label>
+                          </li>
+                          <li class="checkbox__item">
+                            <label class="checkbox__label" for="check-item-13">
+                              <input class="checkbox__input" type="checkbox" id="check-item-13">
+                              <i class="checkbox__icon material-icons">check_box_outline_blank</i>
+                              <span class="checkbox__text">
+                                Чек-листы
+                              </span>
+                            </label>
+                          </li>
+                  </div>
+                </li>
+                <li class="checkbox__item">
+                  <label class="checkbox__label" for="check-item-1">
+                    <input class="checkbox__input" checked="" type="checkbox" id="check-item-1">
+                    <i class="checkbox__icon material-icons">check_box</i>
+                    <span class="checkbox__text">
+                      Маркированный, нумерованный списки.
+                    </span>
+                  </label>
+                </li>
+                <li class="checkbox__item">
+                  <label class="checkbox__label" for="check-item-2">
+                    <input class="checkbox__input" type="checkbox" id="check-item-2">
+                    <i class="checkbox__icon material-icons">check_box_outline_blank</i>
+                    <span class="checkbox__text">
+                      Гиперссылки
+                    </span>
+                  </label>
+                </li>
+                <li class="checkbox__item">
+                  <label class="checkbox__label" for="check-item-3">
+                    <input class="checkbox__input" type="checkbox" id="check-item-3">
+                    <i class="checkbox__icon material-icons">check_box_outline_blank</i>
+                    <span class="checkbox__text">
+                      Чек-листы
+                    </span>
+                  </label>
+                </li>
+              </ul>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of container -->
+
+  <footer>
   <script src="/js/main.js"></script>
+</footer>
 </body>
+
 </html>

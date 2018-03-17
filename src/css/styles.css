@@ -1,7 +1,1 @@
-body {
-  background-color: azure;
-}
-h1 {
-  color: lightcoral;
-  font-size: 50px;
-}
+@import 'blocks/*.css';

@@ -1,0 +1,57 @@
+.accordion {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  &-row {
+    margin: 10px 0;
+    transition: all .5s ease;
+  }
+
+  &-header {
+    height: 70px;
+    background-color: rgb(11, 93, 109);
+    border-radius: 10px;
+    display: flex;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    position: relative;
+    transition: all .7s ease;
+
+    .expand {
+      position: absolute;
+      right: 30px;
+      top: 35px;
+      transition: all .5s cubic-bezier(0.080, 1.090, 0.320, 1.275);
+    }
+  }
+  &-content {
+    overflow: hidden;
+    max-height: 0px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    transition: all .5s ease;
+    
+    .wr {
+      padding: 20px;
+    }
+  }
+  
+  &-row.open {
+
+    .accordion-header {
+      border-radius: 10px 10px 0 0;
+    }
+
+    .accordion-content {
+      max-height: 1000px;
+      transition: all .5s ease-in; 
+    }
+
+    .expand {
+      transform: rotate(180deg)
+    }
+  }
+}

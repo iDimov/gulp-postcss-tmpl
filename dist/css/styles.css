@@ -1,7 +1,135 @@
-body {
-  background-color: azure;
+.accordion {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
-h1 {
-  color: lightcoral;
-  font-size: 50px;
+
+  .accordion-row {
+    margin: 10px 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+
+  .accordion-header {
+    height: 70px;
+    background-color: rgb(11, 93, 109);
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: white;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    position: relative;
+    -webkit-transition: all .7s ease;
+    transition: all .7s ease;
+  }
+
+  .accordion-header .expand {
+      position: absolute;
+      right: 30px;
+      top: 35px;
+      -webkit-transition: all .5s cubic-bezier(0.080, 1.090, 0.320, 1.275);
+      transition: all .5s cubic-bezier(0.080, 1.090, 0.320, 1.275);
+    }
+
+  .accordion-content {
+    overflow: hidden;
+    max-height: 0px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+
+  .accordion-content .wr {
+      padding: 20px;
+    }
+
+  .accordion-row.open .accordion-header {
+      border-radius: 10px 10px 0 0;
+    }
+
+  .accordion-row.open .accordion-content {
+      max-height: 1000px;
+      -webkit-transition: all .5s ease-in;
+      transition: all .5s ease-in; 
+    }
+
+  .accordion-row.open .expand {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg)
+    }
+.checkbox {
+  padding: 0;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 2px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(216, 216, 216, 0)), to(rgba(216, 216, 216, 0)));
+  background-image: linear-gradient(rgba(216, 216, 216, 0), rgba(216, 216, 216, 0));
+  background-blend-mode: multiply;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .14);
+          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .14);
+}
+.checkbox .submenu {
+    max-height: 0px;
+    overflow: hidden;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    margin-left: 30px;
+  }
+.checkbox .submenu.open {
+    max-height: 1000px;
+  }
+.checkbox .chevron {
+    position: absolute;
+    cursor: pointer;
+    top: 12px;
+    left: 7px;
+    -webkit-transition: all .5s cubic-bezier(0.080, 1.090, 0.320, 1.275);
+    transition: all .5s cubic-bezier(0.080, 1.090, 0.320, 1.275);
+  }
+.checkbox .chevron.open {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+.checkbox__list {
+    list-style-type: none;
+    padding: 0;
+    
+  }
+.checkbox__item {
+    line-height: 47px;
+    position: relative;
+  }
+.checkbox .checkbox__input {
+    position: absolute;
+    left: -9999px;
+  }
+.checkbox__label {
+    padding-left: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+  }
+.checkbox__text {
+    padding-right: 15px;
+    font-size: 13px;
+    padding-left: 10px;
+  }
+.checkbox__icon.material-icons {
+    line-height: 47px;
+  }
+.checkbox input[type=checkbox]:checked + i.material-icons{
+    color: #2196f3;
+    opacity: 1;
+   }
+body {
+  background-color: lightcyan;
+  font-family: 'Roboto';
 }

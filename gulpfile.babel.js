@@ -24,7 +24,7 @@ const path = {
 	},
 	src: {
 		html: 'src/html/*.html',
-    js: 'src/js/*.js',
+    js: 'src/js/**/*.js',
 		style: 'src/css/styles.css',
 		img: 'src/i/*.*',
 		fonts: 'src/fonts/**/*'
@@ -43,7 +43,7 @@ const bsConfig = {
         baseDir: "./dist"
     },
     tunnel: false,
-    port: 3000,
+    port: 3123,
     logPrefix: 'browserSync',
     open: true
 };
@@ -83,7 +83,6 @@ gulp.task('style:build', () => {
 
 gulp.task('js:build', () => {
     gulp.src(path.src.js)
-    // .pipe(babel())
     .pipe(gulp.dest(path.dist.js))
     .pipe(reload({stream: true}));;
 });
