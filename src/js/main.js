@@ -23,23 +23,21 @@ jQuery(function ($) {
   });
   // end -> inside input open
 
-
-
-
   // start -> checkbox
   $(".checkbox__input").click(function () {
     $(this).siblings(".checkbox__icon").text(this.checked ? "check_box" : "check_box_outline_blank");
+    console.log($( "input:checked" ).length);
   });
   
-  $("#check-all").change(function () {
-    console.log();
+  $("input[id^=check-all").change(function () {
     $(this).closest('.checkbox__item').find(".submenu .checkbox__list input:checkbox").prop('checked', $(this).prop("checked"));
     $(this).closest('.checkbox__item').find(".submenu .checkbox__icon").text(this.checked ? "check_box" : "check_box_outline_blank");
+    console.log($( "input:checked" ).length);
   });
   // end -> checkbox
   
   $('body').on('click', function() {
     // console.log($( "input:checked" ));
-  })
+  });
 
 });
