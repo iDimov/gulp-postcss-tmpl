@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('head.html')
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+  <title>Steps</title>
+</head>
+
+<body>
+  @@include('header.html')
+  <div class="container">
+    <div class="wr">
+      <header class="title">
+        Создание / настройка (проекта, прогноза, контент плана)
+      </header>
+    </div>
+    <div class="wr">
+      <section class="data-table">
+        @@include('data-table.html')
+      </section>
+    </div>
+
+  </div>
+
+  @@include('footer.html')
+  <script src="/js/vendor/datatables.js"></script>
+  <script src="/js/vendor/materialize.js"></script>
+  <script src="/js/table.js"></script>
+</body>
+
+</html>

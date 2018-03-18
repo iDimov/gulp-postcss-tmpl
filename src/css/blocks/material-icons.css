@@ -1,0 +1,17 @@
+.chevron {
+  font-size: 19px;
+  color: #55707e;
+  opacity: 1;
+  margin-right: 5px;
+  transition: all .5s cubic-bezier(0.080, 1.090, 0.320, 1.275);
+}
+
+.open {
+  .accordion-header {
+    
+    .chevron {
+      transform: rotate(90deg);
+    }
+
+  }
+}

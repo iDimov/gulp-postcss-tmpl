@@ -43,7 +43,7 @@ const bsConfig = {
         baseDir: "./dist"
     },
     tunnel: false,
-    port: 3123,
+    port: 3000,
     logPrefix: 'browserSync',
     open: true
 };
