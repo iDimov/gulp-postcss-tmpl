@@ -1,0 +1,23 @@
+.form-default {
+  display: flex;
+  position: relative;
+
+  .button_blue {
+    margin-right: 10px;
+  }
+}
+.zebra-form {
+  border: 1px solid #e7e7e7;
+
+  .form-default {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.upload-box {
+  position: absolute;
+  bottom: -28px;
+  left: 15px;
+}

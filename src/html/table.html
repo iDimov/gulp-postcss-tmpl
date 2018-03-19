@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('head.html')
+  <title>Table</title>
+</head>
+
+<body>
+  <div class="wr">
+    <header class="title">
+      Создание / настройка (проекта, прогноза, контент плана)
+    </header>
+
+    @@include('header.html')
+
+    <section class="data-table">
+      <header class="subtitle">
+        Анализ домена:
+        <span> www.blabla.com </span>
+      </header>
+
+      @@include('data-table.html')
+    </section>
+  </div>
+
+
+  @@include('footer.html')
+  <script src="js/vendor/datatables.js"></script>
+  <script src="js/vendor/materialize.js"></script>
+  <script src="js/table.js"></script>
+</body>
+
+</html>
