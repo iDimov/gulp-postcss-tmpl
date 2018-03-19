@@ -3,12 +3,12 @@
   var factory = function($, DataTable) {
     "use strict";
 
-    $('.search-toggle').click(function() {
-      if ($('.hiddensearch').css('display') == 'none')
-        $('.hiddensearch').slideDown();
-      else
-        $('.hiddensearch').slideUp();
-    });
+    // $('.search-toggle').click(function() {
+    //   if ($('.hiddensearch').css('display') == 'none')
+    //     $('.hiddensearch').slideDown();
+    //   else
+    //     $('.hiddensearch').slideUp();
+    // });
 
     /* Set the defaults for DataTables initialisation */
     $.extend(true, DataTable.defaults, {
@@ -181,7 +181,7 @@
 })(window, document);
 
 $(document).ready(function() {
-  $('#datatable').dataTable({
+  $('table[id^=datatable-').dataTable({
     "pageLength": 5,
     "oLanguage": {
       "sStripClasses": "",

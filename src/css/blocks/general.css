@@ -30,14 +30,14 @@ body {
   color: rgba(0, 0, 0, 0.87)
 }
 .text-input {
-  height: 36px;
-  margin: 0 16px;
-  width: 100%;
-  line-height: 36px;
-  border-radius: 3px;
-  border: solid 1px #e3e3e3;
-  outline: none;
-  padding: 0 12px;
+  height: 36px !important;
+  margin: 0 16px !important;
+  width: 100% !important;
+  line-height: 36px !important;
+  border-radius: 3px !important;
+  border: solid 1px #e3e3e3 !important;
+  outline: none !important;
+  padding: 0 12px !important;
 }
 ::placeholder { 
   font-family: Roboto;

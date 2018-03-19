@@ -22,7 +22,9 @@ div.material-table {
 div.material-table .hiddensearch {
   padding: 0 14px 0 24px;
   border-bottom: solid 1px #DDDDDD;
-  display: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 div.material-table .hiddensearch input {
@@ -55,6 +57,8 @@ div.material-table .table-header {
 div.material-table .table-header .actions {
   display: -webkit-flex;
   margin-left: auto;
+  position: relative;
+  bottom: -58px;
 }
 
 div.material-table .table-header .btn-flat {
@@ -246,4 +250,17 @@ div.material-table table td:first-child {
 div.material-table table th:last-child,
 div.material-table table td:last-child {
   padding: 0 14px 0 0;
+}
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+  box-shadow: none !important;
+}
+
+.dataTables_filter {
+  width: 100%;  
+}
+
+input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #2196f3;
+  box-shadow: 0 1px 0 0 #2196f3;
 }

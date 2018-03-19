@@ -7,57 +7,90 @@
 </head>
 
 <body>
-  @@include('header.html')
-  <div class="container">
-    <div class="wr">
-      <header class="title">
-        Создание / настройка (проекта, прогноза, контент плана)
-      </header>
-    </div>
-    <div class="wr">
 
-      <section class="domain">
-        <div class="subtitle">
-          Введите свой домен для анализа
+  <div class="wr">
+    <header class="title">
+      Создание / настройка (проекта, прогноза, контент плана)
+    </header>
+
+    @@include('header.html')
+
+    <section class="domain">
+      <div class="subtitle">
+        Введите свой домен для анализа
+      </div>
+      <form action="" class="form-default">
+        <input type="text" placeholder="Введите домен" class="text-input" />
+        <input type="submit" class="button button_blue" value="ДОБАВИТЬ" />
+      </form>
+    </section>
+    <section class="domain-competitors">
+      <div class="subtitle">
+        Введите домены конкурентов для анализа
+      </div>
+      @@include('competitors.html')
+    </section>
+
+    <section class="keywords">
+      <div class="subtitle">
+        Добавьте ключевые слова для анализа
+      </div>
+      <form action="" class="form-default">
+        <input type="text" placeholder="Введите домен" class="text-input" />
+        <input type="submit" class="button button_blue" value="ДОБАВИТЬ" />
+        <div class="upload-box">
+          <input type="file" name="file-key" id="file-key" class="inputfile inputfile-3" multiple />
+          <label for="file-key">
+            <span>Импорт</span>
+          </label>
         </div>
-        <form action="" class="form-default">
-          <input type="text" placeholder="Введите домен" class="text-input" />
-          <input type="submit" class="button button_blue" value="ДОБАВИТЬ" />
-        </form>
-      </section>
-      <section class="domain-competitors">
-        <div class="subtitle">
-          Введите домены конкурентов для анализа
-        </div>
-        @@include('competitors.html')
-      </section>
+      </form>
+    </section>
 
-      <section class="keywords">
-        <div class="subtitle">
-          Добавьте ключевые слова для анализа
-        </div>
-        <form action="" class="form-default">
-          <input type="text" placeholder="Введите домен" class="text-input" />
-          <input type="submit" class="button button_blue" value="ДОБАВИТЬ" />
-          <div class="upload-box">
-            <input type="file" name="file-key" id="file-key" class="inputfile inputfile-3" multiple />
-            <label for="file-key">
-              <span>Импорт</span>
-            </label>
-          </div>
-        </form>
-      </section>
+    <section class="niche">
+      <div class="subtitle">
+        Или выбрать нишу
+      </div>
+      @@include('accordion.html')
+    </section>
 
-      <section class="niche">
-        <div class="subtitle">
-          Или выбрать нишу
-        </div>
-        @@include('accordion.html')
+    <section class="result">
+      <div class="subtitle">
+        Всего строк 14438
+      </div>
+
+      <form action="">
+        <p>
+          <input type="radio" name="group" id="radio2" class="with-gap" />
+          <label for="radio2">CSV</label>
+        </p>
+        <p>
+          <input type="radio" name="group" id="radio1" class="with-gap" />
+          <label for="radio1">XLSX</label>
+        </p>
+        <p>
+          <input type="radio" name="group" id="radio3" class="with-gap" />
+          <label for="radio3">XLS</label>
+        </p>
 
 
-      </section>
-    </div>
+        
+        <input type="submit" class="button button_blue" value="Выгрузить файл" />
+      </form>
 
+
+      <div class="subtitle">
+        Выгрузить все
+      </div>
+
+
+      <form action="" class="form-default">
+        <input type="text" placeholder="Limit 100 000" class="text-input" />
+        <input type="text" placeholder="Offset" class="text-input" />
+        <input type="submit" class="button button_blue" value="Выгрузить файл" />
+      </form>
+
+    </section>
   </div>
 
   @@include('footer.html')
