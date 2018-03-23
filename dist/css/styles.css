@@ -268,6 +268,146 @@
       text-align: center;
       font-size: 14px;
     }
+body {
+  background-color: #fff !important;
+ 
+      overflow: hidden;
+}
+#number_coin {
+          position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: 102px;
+    overflow: visible;
+}
+body, div, h1,h2 {
+  margin:0;
+  padding:0;
+}
+.containerac {
+  margin: 0 auto;
+  width: 600px; 
+}
+.number-section {
+    position: absolute;
+        margin-top: 94px;
+    left: 50%;
+    margin-left: -96px;
+    width: 174px;
+    opacity: 0;
+}
+.number-section:first-child {
+    
+    opacity: 1;
+}
+.container {
+    overflow: hidden;
+    position: absolute;
+    height: 600px;
+    width:100%;
+}
+.circleLarge{fill:#ffd400;  opacity: 0.3; cursor:pointer; -webkit-transition:scale 0.5s; transition:scale 0.5s;}
+.circleLarge:hover {
+ margin-top:10px;
+    width: 159px;
+    height: 26px;
+      opacity: 1 !important;
+}
+.circleLarge1:hover {
+ fill: rgb(255, 212, 0);
+  
+
+   
+    -webkit-transform: matrix(1.57184, -0.64753, 0.64753, 1.57184, -342.758, 184.131) !important;
+  
+
+   
+            transform: matrix(1.57184, -0.64753, 0.64753, 1.57184, -342.758, 184.131) !important;
+    cx:"422.39999";
+     cy:"156.3";
+
+}
+.circleLarge2:hover {
+ fill: rgb(255, 212, 0);
+
+
+ 
+   -webkit-transform: matrix(1.57184, -0.64753, 0.64753, 1.57184, -463.885, 76.0568)!important;
+
+
+ 
+           transform: matrix(1.57184, -0.64753, 0.64753, 1.57184, -463.885, 76.0568)!important;
+   cx:"421.39999" ;
+   cy:"344.20001";
+
+}
+.circleLarge3:hover {
+ fill: rgb(255, 212, 0);
+  
+    cx:"250";
+     cy:"446.89999";
+     -webkit-transform: matrix(1.57184, -0.64753, 0.64753, 1.57184, -432.395, -93.6447)!important;
+             transform: matrix(1.57184, -0.64753, 0.64753, 1.57184, -432.395, -93.6447)!important;
+
+}
+.circleLarge4:hover {
+ fill: rgb(255, 212, 0);
+  
+   cx:"78.300003";
+   cy:"343.5"; 
+        -webkit-transform: matrix(0.75209, -1.52458, 1.52458, 0.75209, -504.235, 204.519) !important; 
+                transform: matrix(0.75209, -1.52458, 1.52458, 0.75209, -504.235, 204.519) !important;
+}
+.circleLarge5:hover {
+ fill: rgb(255, 212, 0);
+  cx:"79";
+   cy:"156" ;
+
+     
+         -webkit-transform: matrix3d(0.752092, -1.52458, 0, 0, 1.52458, 0.752092, 0, 0, 0, 0, 1, 0, -218.255, 159.111, 0, 1) !important;
+
+     
+                 transform: matrix3d(0.752092, -1.52458, 0, 0, 1.52458, 0.752092, 0, 0, 0, 0, 1, 0, -218.255, 159.111, 0, 1) !important;
+}
+.circleSmall{fill:#FFFAFA; opacity:0.3}
+.incontainer {
+  position: absolute;
+  z-index: 20;
+  left: 300px;
+  top: 242px;
+  color: #FFFAFA;
+  
+}
+@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (max-width:801px)  { .container {
+  
+} }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+#controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 310px;
+  -webkit-transform: translate(-50%, 120px);
+          transform: translate(-50%, 120px);
+}
+#timeline {
+  z-index: 10;
+    position: absolute;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    left: 50%;
+    margin-left: -195px;
+    
+}
+#timeline svg {
+      margin-top: 10px;
+    overflow: visible;
+}
 .circular {								
   position:absolute;
   top:50%;
@@ -356,6 +496,12 @@ div.material-table {
   text-align: left;
   color: rgba(0, 0, 0, .87);
 }
+div.material-table .checkbox__label {
+    border-bottom: 0;
+  }
+div.material-table td, div.material-table th {
+    border-radius: 0;
+  }
 div.material-table .odd {
     background-color: #f7f7f7;
   }
@@ -520,7 +666,7 @@ div.material-table table tr td:nth-child(2) {
   /* height: 48px; */
   /* font-size: 13px; */
   color: rgba(0, 0, 0, .87);
-  border-bottom: solid 1px #DDDDDD;
+  /* border-bottom: solid 1px #DDDDDD; */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

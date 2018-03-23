@@ -20,15 +20,22 @@ jQuery(function ($) {
   //  checkbox
   $(".checkbox__input").click(function () {
     $(this).siblings(".checkbox__icon").text(this.checked ? "check_box" : "check_box_outline_blank");
-    console.log($( "input:checked" ).length);
   });
   $("input[id^=check-all").change(function () {
     $(this).closest('.checkbox__item').find(".submenu .checkbox__list input:checkbox").prop('checked', $(this).prop("checked"));
     $(this).closest('.checkbox__item').find(".submenu .checkbox__icon").text(this.checked ? "check_box" : "check_box_outline_blank");
-    console.log($( "input:checked" ).length);
   });
-
   
+  $('td').on('click', function() {
+    $(this).closest('tr').toggleClass('selected');
+    var currectChecbox = $(this).closest('tr').find("td:first-child").find('input');
+    currectChecbox.prop("checked", !currectChecbox.prop("checked"));
+    currectChecbox.siblings('.checkbox__icon').text(  currectChecbox.prop("checked") ? "check_box" : "check_box_outline_blank");
+    console.log(currectChecbox);
+    
+  });
+  
+  console.log($( "input:checked" ).length);
 
 
 
