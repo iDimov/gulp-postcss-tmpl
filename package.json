@@ -15,9 +15,9 @@
     "gulp-postcss": "latest",
     "gulp-rename": "^1.2.2",
     "gulp-watch": "latest",
-    "normalize.css": "latest",
     "postcss-cssnext": "latest",
     "postcss-inline-svg": "latest",
+    "postcss-normalize": "^4.0.0",
     "postcss-partial-import": "latest"
   },
   "dependencies": {

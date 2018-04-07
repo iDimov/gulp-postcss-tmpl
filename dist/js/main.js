@@ -1,3 +1,7 @@
-let foo = () => console.log('dsds');
+'use strict';
 
-foo();
+jQuery(function ($) {
+  $('.burger-menu').on('click', function () {
+    $(this).toggleClass('open');
+  });
+});

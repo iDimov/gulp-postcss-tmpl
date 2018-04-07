@@ -24,7 +24,7 @@ const path = {
 	},
 	src: {
 		html: 'src/html/*.html',
-    js: 'src/js/*.js',
+    js: 'src/js/**/*.js',
 		style: 'src/css/styles.css',
 		img: 'src/i/*.*',
 		fonts: 'src/fonts/**/*'
@@ -63,8 +63,8 @@ gulp.task('style:build', () => {
 	const processors = [
     pimport,
     pnested,
-		pcssnext,
-		pinline_svg,
+    pcssnext,
+    pinline_svg,
     psvgo
   ];
   const min = [
@@ -83,7 +83,7 @@ gulp.task('style:build', () => {
 
 gulp.task('js:build', () => {
     gulp.src(path.src.js)
-    // .pipe(babel())
+    .pipe(babel())
     .pipe(gulp.dest(path.dist.js))
     .pipe(reload({stream: true}));;
 });
