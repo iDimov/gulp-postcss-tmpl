@@ -1,0 +1,94 @@
+{
+  "title": "Omnigon",
+  "sidebar": {
+    "draft": [
+      {
+        "imgUrl": "src",
+        "text": "Choose best Wimbledon player and win tickets to the finals"
+      }
+    ],
+    "active": [{
+        "imgUrl": "src",
+        "text": "Unleash a Jaguar"
+      },
+      {
+        "imgUrl": "src",
+        "text": "Choose best Wimbledon player and win tickets to the finals"
+      },
+      {
+        "imgUrl": "src",
+        "text": "2015 Music Moments"
+      }
+    ],
+    "close": [{
+        "imgUrl": "src",
+        "text": "All time greats"
+      },
+      {
+        "imgUrl": "src",
+        "text": "Insane Dunks"
+      },  
+      {
+        "imgUrl": "src",
+        "text": "2014 Music Moments"
+      }
+    ]
+  },
+  "tabs": {
+    "Detail": {},
+    "Content": {
+      "active": "active",
+      "controls": "Present in random order",
+      "embed": "Embed at least 2 players*",
+      "players": [
+        {
+          "imgUrl": "src",
+          "name": "DeMar DeRozan"
+        },
+        {
+          "imgUrl": "src",
+          "name": "Stephen Curry"
+        },
+        {
+          "imgUrl": "src",
+          "name": "Kevin Durant"
+        },
+        {
+          "imgUrl": "src",
+          "name": "James Harden"
+        },
+        {
+          "imgUrl": "src",
+          "name": "DeAndre Jordan"
+        },
+        {
+          "imgUrl": "src",
+          "name": "Russell Westbrook"
+        },
+        {
+          "imgUrl": "src",
+          "name": "Chandler Parsons"
+        },
+        {
+          "imgUrl": "src",
+          "name": "Kenneth Faried"
+        },
+        {
+          "imgUrl": "src",
+          "name": "Gordon Hayward"
+        },
+        {
+          "imgUrl": "src",
+          "name": "Mike Conley"
+        },
+        {
+          "imgUrl": "src",
+          "name": "Dwight Howard"
+        }
+      ]
+    },
+    "Ads": {},
+    "Data capture": {},
+    "Look and feel": {}
+  }
+}

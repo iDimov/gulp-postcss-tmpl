@@ -1,0 +1,56 @@
+{
+  "index": {
+    "title": "Home page",
+    "nav_index": "active",
+    "meta": {
+      "description": "example page index",
+      "og:image": "/img/logo.png"
+    }
+  },
+  "about": {
+    "title": "About us",
+    "nav_about": "active",
+    "intro": "Meet our team!",
+    "people": {
+      "Pawel": "CEO",
+      "Tom": "The developer",
+      "Mike": "Just Mike"
+    },
+    "meta": {
+      "description": "example page about",
+      "og:image": "/img/logo.png"
+    },
+    "active": [
+      { 
+        "image": "src",
+        "text": "Choose best Wimbledon player and win tickets to the finals"
+      },
+      { 
+        "image": "src",
+        "text": "Choose best Wimbledon player and win tickets to the finals"
+      },
+      { 
+        "image": "src",
+        "text": "Choose best Wimbledon player and win tickets to the finals"
+      }
+    ]
+  },
+  "tabs": {
+    "Detail": {},
+    "Content": {
+      "active": "active",
+      "controls": "Present in random order",
+      "embed": "Embed at least 2 players*",
+      "players": [
+        {
+          "imgUrl": "src",
+          "name": "DeMar DeRozan"
+        }
+      ]
+    },
+    "Ads": {},
+    "Data capture": {},
+    "Look and feel": {}
+  }
+
+}

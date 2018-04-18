@@ -12,30 +12,28 @@ import imagemin from 'gulp-imagemin';
 import cssnano from 'cssnano';
 import rename from 'gulp-rename';
 import babel from 'gulp-babel';
-import hbsMaster from './src/hbs/index';
+import hbsMaster from './src/templates/index';
 import fs from 'fs';
 // css sourcemap
-//  js min
+// js min
 
 const path = {
 dist: {
   html: './dist/',
   js: './dist/js/',
   css: './dist/css/',
-  img: './dist/i/',
+  img: './dist/img/',
   fonts: './dist/fonts/'
 },
 src: {
-      html: 'src/html/*.html',
-      hbs: 'src/hbs/pages/*.hbs',
-      hbsDest: 'src/html/',
+  hbs: 'src/templates/pages/*.hbs',
   js: 'src/js/**/*.js',
   style: 'src/css/styles.css',
-  img: 'src/i/*.*',
+  img: 'src/img/**/*.*',
   fonts: 'src/fonts/**/*',
 },
 watch: {
-  html: 'src/**/*.html',
+  hbs: 'src/**/*.hbs',
   js: 'src/js/**/*.js',
   style: 'src/css/**/*.css',
   img: 'src/i/*.*',
@@ -54,14 +52,36 @@ const bsConfig = {
 };
 const reload = browserSync.reload;
 
-gulp.task('html:build', () => {
-gulp.src(path.src.html)
-  .pipe(gfinclude({
-    prefix: '@@',
-    basepath: 'src/html/tmpl'
-  }))
-  .pipe(gulp.dest(path.dist.html))
-  .pipe(reload({stream: true}));
+// gulp.task('html:build', () => {
+// gulp.src(path.src.html)
+//   .pipe(gfinclude({
+//     prefix: '@@',
+//     basepath: 'src/html/tmpl'
+//   }))
+//   .pipe(gulp.dest(path.dist.html))
+//   .pipe(reload({stream: true}));
+// });s
+
+gulp.task('html:build', function() {
+
+  var templatedata = JSON.parse(fs.readFileSync('src/templates/data.json'));
+  var options = {
+    batch: [ 'src/templates/partials/' ],
+		helpers: {
+			times: function(n, block) {
+        var accum = '';
+        for(var i = 0; i < n; ++i)
+            accum += block.fn(i);
+        return accum;
+    }
+		}
+  };
+  
+  gulp.src(path.src.hbs)
+    .pipe( hbsMaster('./src/templates/master.hbs', templatedata, options ))
+    .pipe( rename( function(path){ path.extname = '.html'; }))
+    .pipe(gulp.dest(path.dist.html))
+    .pipe(reload({stream: true}));
 });
 
 // css sourcemap
@@ -70,8 +90,8 @@ const processors = [
   pimport,
   pnested,
   pcssnext,
-  pinline_svg,
-  psvgo
+  // pinline_svg,
+  // psvgo
 ];
 const min = [
   cssnano
@@ -96,26 +116,27 @@ gulp.task('js:build', () => {
 });
 gulp.task('image:build', () => {
   gulp.src(path.src.img)
-    .pipe(gulp.dest(path.dist.img));
+  .pipe(imagemin())
+  .pipe(gulp.dest(path.dist.img));
 });
 
-gulp.task('fonts:build', () => {
-  gulp.src(path.src.fonts)
-    .pipe(gulp.dest(path.dist.fonts));
-});
+// gulp.task('fonts:build', () => {
+//   gulp.src(path.src.fonts)
+//     .pipe(gulp.dest(path.dist.fonts));
+// });
 
 gulp.task('build', [
 'html:build',
 'style:build',
 'js:build',
 'image:build',
-'fonts:build'
+// 'fonts:build'
 ]);
 
 gulp.task('watch', () => {
-  // watch([path.watch.html], (event, cb) => {
-  //     gulp.start('html:build');
-  // });
+  watch([path.watch.hbs], (event, cb) => {
+      gulp.start('html:build');
+  });
   watch([path.watch.style], (event, cb) => {
       gulp.start('style:build');
   });
@@ -134,19 +155,6 @@ gulp.task('webserver', () => {
   browserSync(bsConfig);
 });
 
-gulp.task('handlebars', function() {
 
-  var templatedata = JSON.parse(fs.readFileSync('src/hbs/data.json'));
-  var options = {
-batch : [ 'src/hbs/partials/' ]
-  };
-  
-  gulp.src(path.src.hbs)
-.pipe( hbsMaster('src/hbs/master.hbs', templatedata, options ))
-    .pipe( rename( function(path){
-      path.extname = '.html';
-    }))
-    .pipe(gulp.dest(path.src.hbsDest));
-});
 
-gulp.task('default', ['handlebars', 'build', 'webserver', 'watch']);
+gulp.task('default', ['build', 'webserver', 'watch']);
