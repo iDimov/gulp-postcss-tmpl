@@ -1,4 +1,4 @@
-body {
+/* body {
   padding: 0;
   margin: 0;
 }
@@ -7,7 +7,6 @@ body {
   max-width: 1300px;
   margin: 0 auto;
 }
-
 
 .row.no-gutters.justify-content-center {
   display: flex;
@@ -26,17 +25,15 @@ body {
   margin-right: 20px;
 }
 
-
-aside {
-  max-width: 255px;
-  width: 100%;
-  background-color: #fff;
-  padding: 16px;
-}
-
 .body-content {
   padding: 50px  0;
   display: flex;
   justify-content: center;
   background-color: #f4f4f4;
-}
+} */
+/* aside {
+  max-width: 255px;
+  width: 100%;
+  background-color: #fff;
+  padding: 16px;
+} */

@@ -180,50 +180,45 @@
         border-radius: 2px;
         background-color: #ff7a62;
       }
-body {
+/* body {
   padding: 0;
   margin: 0;
 }
+
 .container {
   max-width: 1300px;
   margin: 0 auto;
 }
+
 .row.no-gutters.justify-content-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
+
 .col-xl-3.col-xxl-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;  
   height: 90px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-left: 20px;
 }
+
 .note__body {
   max-width: 800px;
   background-color: #fff;
   margin-right: 20px;
 }
-aside {
+
+.body-content {
+  padding: 50px  0;
+  display: flex;
+  justify-content: center;
+  background-color: #f4f4f4;
+} */
+/* aside {
   max-width: 255px;
   width: 100%;
   background-color: #fff;
   padding: 16px;
-}
-.body-content {
-  padding: 50px  0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #f4f4f4;
-}
+} */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
