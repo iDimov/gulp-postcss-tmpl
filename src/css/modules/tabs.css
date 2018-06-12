@@ -1,0 +1,109 @@
+.vd-tab {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 10px;
+  -webkit-font-smoothing: antialiased;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.87);
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 39px;
+      height: 23px;
+      background-color: #ff7a62;
+      display: inline-block;
+      left: -16px;
+      top: -2px;
+      background-image: url(/i/trophy.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+}
+
+.vd-tabs {
+  display: table;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  padding-left: 0;
+
+  li {
+    float: left;
+    overflow: hidden;
+    margin: 5px 0;
+    width: 33%;
+    position: relative;
+    text-align: center;
+  }
+
+  a {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+  }
+}
+
+.vd-tabs__item {
+  display: none;
+
+  h4 {
+    font-weight: bold;
+    color: $color;
+    font-size: 20px;
+  }
+
+  &:first-child {
+    display: block;
+  }
+}
+
+.vd-tabs-card {
+  header {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 32px;
+      height: 32px;
+      display: block;
+      margin-right: 8px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.87);
+    }
+
+    time {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.4);
+      display: block;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.57;
+    color: rgba(0, 0, 0, 0.87);
+    margin: 4px 0;
+  }
+  &__link {
+    font-size: 11px;
+    line-height: 1.44;
+    color: #2196f3;
+  }
+}
+
+.current a {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
+}

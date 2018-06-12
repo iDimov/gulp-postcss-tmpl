@@ -1,0 +1,48 @@
+.vd-lang {
+  position: relative;
+  display: flex;
+  font-size: 14px;
+  height: 90px;
+  align-items: center;
+  color: #ffffff;
+
+  &__icon {
+    margin-right: 9px;
+  }
+
+  &__current {
+    position: relative;
+  }
+
+  &-box {
+    position: absolute;
+    left: -8px;
+    top: -9px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.12),
+      0 2px 4px 0 rgba(0, 0, 0, 0.14);
+    opacity: 0;
+    color: rgba(0, 0, 0, 0.87);
+    visibility: hidden;
+    pointer-events: none;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+
+    a:first-child {
+      margin-bottom: 5px;
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+}

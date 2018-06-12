@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', Tahoma, sans-serif;
+}
+
+.glheader {
+  height: 90px;
+  background-color: #1f1f1f;
+}
+
+#vd-header {
+  display: flex;
+  height: 90px;
+  align-items: center;
+  .vd-logo {
+    img {
+      max-width: 300px;
+      display: block;
+      max-height: 51px;
+    }
+  }
+  .vd-cons {
+    .coins {
+      display: flex;
+      color: #cacaca;
+      list-style-type: none;
+      padding-left: 0;
+      margin-left: 60px;
+      .coins__item {
+        padding: 0 10px;
+        font-size: 14px;
+        font-weight: bold;
+        .change-up {
+          color: #51ff59;
+        }
+        .change-down {
+          color: #ff5151;
+        }
+      }
+    }
+  }
+  .vd-search {
+    width: 80px;
+    display: flex;
+    justify-content: flex-end;
+    .search-form {
+      position: relative;
+      .search-field {
+        width: 0px;
+        padding: 0;
+        border: 0;
+        height: 32px;
+        transition: width .7s ease;
+        position: relative;
+        &.open {
+          width: 610px;
+          padding-left: 40px;
+          &+.vd-search__icon {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+      .search-submit {
+        border: 0;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        outline: none;
+        .vd-search__icon {
+          position: absolute;
+          top: -26px;
+          left: 12px;
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+        }
+        &.open {
+          .vd-search__icon {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+
+          }
+          
+        }
+      }
+      .search-field-control {
+        background-image: url('/i/search.svg');
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 10px;
+        top: 4px;
+        cursor: pointer;
+        &.open {
+          background-image: url('/i/close.svg');
+        }
+      }
+    }
+  }
+  .vd-lang {
+    margin-left: 50px;
+  }
+}
+
+.screen-reader-text {
+  display: none;
+}

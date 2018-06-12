@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+.open {
+  cursor: pointer;
+}
+.vd-modal {
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: flex;
+  transition: all 0.4s ease;
+  overflow-y: auto;
+  align-items: center;
+  -webkit-overflow-scrolling: touch;
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9;
+    .vd-modal__box {
+      transform: translateY(0px);
+    }
+  }
+
+  &__box {
+    position: relative;
+    margin: auto;
+    padding: 25px;
+    max-width: 474px;
+    width: 100%;
+    min-height: 405px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 18px 0 rgba(0, 0, 0, 0.12),
+      0 6px 10px 0 rgba(0, 0, 0, 0.14);
+    z-index: 10;
+    transform: translateY(-100px);
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0 -25px 35px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.87);
+    padding-bottom: 35px;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  ::placeholder {
+    line-height: 1.14;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+  }
+
+  .vd-modal-form {
+    display: flex;
+    flex-direction: column;
+
+    input[type="text"] {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 10px;
+      border: 0;
+      outline: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+      margin-bottom: 35px;
+
+      &:focus {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.82);
+      }
+    }
+    input[type="submit"] {
+      max-width: 200px;
+      width: 100%;
+      height: 36px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 2px;
+      background-color: #ff7a62;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+}
+
