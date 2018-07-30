@@ -70,9 +70,10 @@ gulp.task("html:build", () => {
 var config = {
   mode: {
     css: {
-      dest: "/src/js",
+      dest: "../new/",
+      sprite: "../svg-spritess/",
       render: {
-        css: path.dist.svg
+        css: true
       }
     }
   }
