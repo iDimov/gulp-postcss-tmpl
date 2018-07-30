@@ -1,3 +1,3 @@
-let foo = () => console.log('dsds');
+let foo = () => console.log("hello");
 
 foo();
