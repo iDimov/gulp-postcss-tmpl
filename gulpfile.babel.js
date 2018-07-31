@@ -70,8 +70,8 @@ gulp.task("html:build", () => {
 var config = {
   mode: {
     css: {
-      dest: "../new/",
-      sprite: "../svg-spritess/",
+      dest: "../../css/vendor/",
+      sprite: "../../img/svg-sprite",
       render: {
         css: true
       }
