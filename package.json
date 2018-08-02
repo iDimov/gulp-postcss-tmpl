@@ -1,8 +1,8 @@
 {
-  "name": "postcss",
+  "name": "css start template",
   "version": "1.0.0",
   "description": "",
-  "author": "ophyros",
+  "author": "idimov",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "latest",
