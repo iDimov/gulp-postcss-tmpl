@@ -1,5 +1,7 @@
 body {
-  background-color: azure;
+  background-color: white;
+  font-family: var(--font-roboto);
+  font-size: 14px;
 }
 
 h1 {
