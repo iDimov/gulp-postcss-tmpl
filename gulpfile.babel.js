@@ -13,7 +13,10 @@ import imagemin from "gulp-imagemin";
 import cssnano from "cssnano";
 import rename from "gulp-rename";
 import svgSprite from "gulp-svg-sprite";
-// import babel from "gulp-babel";
+import babel from "gulp-babel";
+import minify from "gulp-babel-minify";
+import sourcemaps from "gulp-sourcemaps";
+import concat from "gulp-concat";
 
 const path = {
   dist: {
@@ -27,7 +30,7 @@ const path = {
   },
   src: {
     html: "src/html/*.html",
-    js: "src/js/*.js",
+    js: "src/js/**/*.js",
     svg: "src/img/svg/*.svg",
     style: "src/css/styles.css",
     img: "src/img/*.*",
@@ -90,7 +93,9 @@ gulp.task("style:build", () => {
   const min = [cssnano];
   gulp
     .src(path.src.style)
+    .pipe(sourcemaps.init())
     .pipe(postcss(processors))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(path.dist.css))
     .pipe(reload({ stream: true }))
     .pipe(postcss(min))
@@ -106,7 +111,17 @@ gulp.task("style:build", () => {
 gulp.task("js:build", () => {
   gulp
     .src(path.src.js)
-    // .pipe(babel())
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(concat("all.js"))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(path.dist.js))
+    .pipe(minify())
+    .pipe(
+      rename({
+        suffix: ".min"
+      })
+    )
     .pipe(gulp.dest(path.dist.js))
     .pipe(reload({ stream: true }));
 });
