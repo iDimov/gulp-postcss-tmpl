@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "author": "idimov",
+  "scripts": {
+    "start": "gulp"
+  },
   "license": "ISC",
   "devDependencies": {
     "babel-core": "latest",
