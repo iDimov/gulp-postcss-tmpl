@@ -1,0 +1,8 @@
+"use strict";
+
+var foo = function foo() {
+  return console.log("hello");
+};
+
+foo();
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiXSwibmFtZXMiOlsiZm9vIiwiY29uc29sZSIsImxvZyJdLCJtYXBwaW5ncyI6Ijs7QUFBQSxJQUFJQSxNQUFNLFNBQU5BLEdBQU07QUFBQSxTQUFNQyxRQUFRQyxHQUFSLENBQVksT0FBWixDQUFOO0FBQUEsQ0FBVjs7QUFFQUYiLCJmaWxlIjoiYWxsLmpzIiwic291cmNlc0NvbnRlbnQiOlsibGV0IGZvbyA9ICgpID0+IGNvbnNvbGUubG9nKFwiaGVsbG9cIik7XHJcblxyXG5mb28oKTtcclxuIl19
